@@ -10,58 +10,60 @@
 	<title>Profile</title>
 </head>
 <body>
-	<main>
+
+	<section class="home-screen">
+
+		<div class="header-home" id="home-header">
+			<h1>Welcome.</h1>
+			<p>Please choose a developer to learn about them.</p>
+		</div>
+
+		<div class="home-image">
+			<div class="image-container" id="image-container">
+				<a class="jeff switch" id="jImage" data-offset="0"></a>
+				<a class="gino switch" id="gImage" data-offset="1"></a>
+			</div>
+		</div class="home-image">
+
+	</section class="home-screen">
+
+
+	<header id="profile-header">
+		<a class="home-button" id="home-button">Home.</a>
+	</header>
+	<main class="main-hidden">
 		<div class="profile">
 
 			<div class="container">
-				<div class="photos">
-
-					<img id="person" src="images/g_pose.png" alt="pose">
-			    <img id="person" src="images/g_front.png" alt="front">
-			    <img id="person" src="images/g_eight.png" alt="1/8">
-			    <img id="person" src="images/g_side.png" alt="1/2">
-
+				<div class="photos" id="bio-photos">
+			<!--PHOTO - ARRAY [*][0] --->
 				</div>
 			</div>
 
 			<div clss="bio-container">
 
-				<div class="name">
-					<h1 class="main-name">
-
-						Gino Ghalehpardaz
-
+				<div class="name" id="name">
+					<h1 class="main-name" id="name-animation">
+				<!--NAME - ARRAY [*][1] --->
 					</h1>
 				</div>
 
-				<div class="bio">
+				<div class="bio" id="bio-hover">
 					<h2 class="sub-name">
-
-						Gino Ghalehpardaz
-
+				<!--NAME - ARRAY []*][2] --->
 					</h2>
 					<h4 class="title">
-
-						Student, Fanshawe
-
+				<!--TITLE - ARRAY [*][3] --->
 					</h4>
 					<p class="full-bio">
-
-"Student at Fanshawe College Downtown Campus, enrolled in
-the <i>Interactive Media Design</i> (IDP3) program. Enjoys coding (ALOT),
-marketing, multimedia editing, and more.</br>
-Aspiration in life is to be a web developer (preferably full-stack)
-while balancing being a Professional Mixed Martial Artist."
-
+				<!--BIO - ARRAY [*][4] --->
 					</p>
 				</div>
 
-					<div class="bio-link">
+					<div class="bio-link" id="bio-link">
 						<h3 class="check-out">CHECK OUT</h3>
-						<div class="partner-name">
-
-							<a class="new" id="jeffSwitch">JEFFREY HELDER</a>
-
+						<div class="partner-name" id="bottom-name-animation">
+				<!--PARTNER - ARRAY [*][5] --->
 						</div>
 					</div>
 
