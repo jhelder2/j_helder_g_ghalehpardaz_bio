@@ -1,15 +1,118 @@
+/*GENERAL*/
 img, embed, object, video { max-width: 100%; }
 
-body{
-  width: 100%;
-  height: 100%;
-  font-family: sans-serif;
-}
+body{width: 100%; height: 100%; font-family: sans-serif;}
 
 h1{font-size: 60px;}
 
 i {font-style: italic;}
 
+
+/*HOME SCREEN*/
+
+/*the "lightbox"*/
+.home-screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(255,255,255,1);
+}
+/*hide "lightbox"*/
+.home-screen-hide{display: none;}
+
+/*the window's header'*/
+.header-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 800px;
+  height: 80px;
+  margin: auto;
+  margin-top: 20px;
+
+  transition: .5s;
+}
+#home-header:hover{cursor: default; transform: translate(10px,0);}
+
+.header-home p {padding-right: 4px; font-size: 16px;}
+
+.header-home h1{padding-left: 5px; padding-right:20px; transition: .5s;
+}
+#home-header:hover h1{border-left: 3px solid black;}
+
+/*image frame*/
+.image-container{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  height: 600px;
+
+  transition: 1s;
+}
+#image-container:hover{transform: scale(1.008);}
+/*left image*/
+.jeff {
+  width: 50%;
+  background-image: url(../images/home_j_wait.png);
+  background-repeat: no-repeat;
+
+  transition: .6s ease-in-out;
+}
+#jImage:hover {
+  background-image: url(../images/home_j_chosen.png);
+  background-repeat: no-repeat;
+  cursor: crosshair;
+}
+/*Right image*/
+.gino {
+  width: 50%;
+  height: auto;
+  background-image: url(../images/home_g_wait.png);
+  background-repeat: no-repeat;
+
+  transition: .6s ease-in-out;
+}
+#gImage:hover {
+  width: 50%;
+  height: auto;
+  background-image: url(../images/home_g_chosen.png);
+  background-repeat: no-repeat;
+  cursor: crosshair;
+}
+
+
+/*BIO PAGE*/
+
+/*bio page starts hidden*/
+.main-hidden{display: none;}
+
+/*header*/
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 800px;
+  height: 30px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.home-button {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  padding-left: 20px;
+  cursor: pointer;
+
+  transition: .5s;
+}
+#home-button:hover{color:grey; transform:scale(0.95); padding-left: 4px; border-left: 2px solid grey;}
+
+/*bio container*/
 .profile {
   margin: auto;
   display: flex;
@@ -19,13 +122,67 @@ i {font-style: italic;}
   width: 800px;
 }
 
+/*Photo Section*/
+.photos{
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  height: 500px;
+  width: 200px;
+
+  transition: .8s;
+}
+#bio-photos:hover{
+  cursor: default;
+  transform:  scale(0.93);
+}
+/*custom loading wheel for Jeff photos*/
+.loaderJ{
+  position: absolute;
+  left: 63%;
+  top: 40%;
+  z-index: 1;
+  margin: -75px 0 0 -75px;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-bottom: 10px solid grey;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+
+  -webkit-animation: spin 3.2s linear;
+  -moz-animation: spin 3.2s linear;
+  -o-animation: spin 3.2s linear;
+  animation: spin 3.2s linear;
+}
+/*custom loading wheel for Jeff photos*/
+.loaderG{
+  position: absolute;
+  left: 63%;
+  top: 40%;
+  z-index: 1;
+  margin: -75px 0 0 -75px;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-bottom: 10px solid grey;
+  width: 80px;
+  height: 80px;
+  opacity: 0;
+
+  -webkit-animation: spin 3.2s linear;
+  -moz-animation: spin 3.2s linear;
+  -o-animation: spin 3.2s linear;
+  animation: spin 3.2s linear;
+}
+
+/*Text Sections*/
 .bio-container{
   display:flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
 }
-
+/*large name at top*/
 .name{
   display: flex;
   height: 80px;
@@ -33,26 +190,36 @@ i {font-style: italic;}
   overflow: hidden;
   text-align: center;
   justify-content: center;
+
+  transition: 1s;
+}
+#name:hover{cursor: default; transform: rotateY(20deg) rotateX(10deg);}
+
+#name-animation{
+  -webkit-animation: name-animation 1s alternate infinite;
+  -moz-animation: name-animation 1s alternate infinite;
+  -o-animation: name-animation 1s alternate infinite;
+  animation: name-animation 1s alternate infinite;
 }
 
+/*bio details*/
 .bio{
   width:400px;
   margin-top: 40px;
   line-height: 1.1;
-}
 
+  transition: .7s;
+}
+#bio-hover:hover{ cursor: default; transform: rotate3d(0,-1,0,15deg);}
+/*name*/
 .bio h2 {font-size: 20px;}
+/*title or position*/
 .bio h4 {font-size: 14px; padding-left: 4px;}
+/*bio discription*/
 .bio p {font-size: 16px; padding-top: 20px; padding-bottom: 60px;}
 
-.photos{
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  height: 500px;
-  width: 200px;
-}
 
+/*link for other profile*/
 .bio-link {
   width: 80%;
   display: flex;
@@ -62,14 +229,98 @@ i {font-style: italic;}
   text-decoration: none;
   font-size: 18px;
   color: black;
+
+  transition: .6s;
 }
 
-.check-out{
-  font-size: 15px;
-}
+.check-out{font-size: 15px;}
 
+/*partner name link hover*/
+.partner-name a:hover{
+  cursor: pointer;
+  color: grey;
+  padding-right: 4.5px;
+  border-right: 2.5px solid grey;
+  transition: .3s;
+}
+/*animation for bottom name link*/
+#bottom-name-animation {
+  -webkit-animation: bottom-name 3s alternate infinite;
+  -moz-animation: bottom-name 3s alternate infinite;
+  -o-animation: bottom-name 3s alternate infinite;
+  animation: bottom-name 3s alternate infinite;
+}
+/*animation for profile images*/
 #person {
   max-width: 100%;
   height: auto;
   position: absolute;
+
+  -webkit-animation: person-image 4s ease-in-out infinite;
+  -moz-animation: person-image 4s ease-in-out infinite;
+  -o-animation: person-image 4s ease-in-out infinite;
+  animation: person-image 4s ease-in-out infinite;
+}
+/*Delay for image animations*/
+/*makes only one visable at a time*/
+#person:nth-of-type(1) {
+  animation-delay: 3s;
+}
+#person:nth-of-type(2) {
+  animation-delay: 2s;
+}
+#person:nth-of-type(3) {
+  animation-delay: 1s;
+}
+#person:nth-of-type(4) {
+  animation-delay: 0;
+}
+
+/*ANIMATION KEYFRAMES*/
+
+/*profile Images Animation*/
+@keyframes person-image {
+  0% {
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+/*Large Name Animation*/
+@keyframes name-animation {
+  from {transform: translate(0,0);}
+  to {transform: translate(0, 5px);}
+}
+/*partner Name Animation*/
+@keyframes bottom-name {
+  from {transform: translate(10px,0);}
+  to {transform: translate(25px, 0);}
+}
+/*partner Name HOVER Animation*/
+@keyframes bottom-name-hover {
+  from {transform: scale(1);}
+  to {transform: scale(1.03);}
+}
+/*loading Wheel Animation*/
+@keyframes spin {
+  0% {transform: rotate(0deg); opacity:.8;}
+  15% {transform: rotate(180deg);}
+  25% {transform: rotate(425deg);}
+  40% {transform: rotate(605deg);}
+  50% {transform: rotate(850deg);}
+  65% {transform: rotate(1030deg);}
+  75% {transform: rotate(1275deg);opacity: .6;}
+  90% {transform: rotate(1455deg);}
+  100% {transform: rotate(1700deg); opacity:0;}
 }
